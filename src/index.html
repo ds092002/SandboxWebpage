@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-[#fff8ee] font-font">
+    <div>
+        <!-- Navbar start here -->
+        <nav class="w-full h-16 bg-white flex justify-between px-4 md:px-16 items-center">
+            <!-- Logo -->
+            <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover">
+            <!-- Dekstop Menu -->
+            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px]">
+                <li class="mx-5 cursor-pointer hover:text-[#fab758] flex items-center gap-1">
+                    Demos
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                    Pages
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                    Projects 
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                    Blog
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                    Blocks
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                    Documentation
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+            </ul>
+            <ul class="px-2 py-2 cursor-pointer">
+                <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
+                <li></li>
+            </ul>
+            <!-- Hamburger Menu -->
+             <div class="lg:hidden">
+                <button class="text-3xl" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+             </div>
+        </nav>
+        <!-- MOBILE MENU -->
+        <div class="lg:hidden hidden bg-white shadow-lg">
+            <ul class="flex flex-col font-semibold text-[#343f52] text-[17px]">
+                <li>Demos</li>
+                <li>Pages</li>
+                <li>Projects</li>
+                <li>Blog</li>
+                <li>Blocks</li>
+                <li>Documentation</li>
+            </ul>
+        </div>
+        <!-- Navbar end here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
