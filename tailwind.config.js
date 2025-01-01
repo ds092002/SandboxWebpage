@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'font' : ['THICCCBOI, sans-serif']
+        'thic' : ['THICCCBOI', 'sans-serif']
       }
     },
   },

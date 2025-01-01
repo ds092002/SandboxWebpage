@@ -11,59 +11,113 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-[#fff8ee] font-font">
+<body class="bg-[#fff8ee] font-thic">
     <div>
         <!-- Navbar start here -->
-        <nav class="w-full h-16 bg-white flex justify-between px-4 md:px-16 items-center">
+        <nav class="h-16 bg-white flex justify-between px-4 md:px-16 items-center" id="navbar">
             <!-- Logo -->
-            <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover">
+             <a href="" id="logo">
+                 <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover">
+             </a>
             <!-- Dekstop Menu -->
-            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px]">
-                <li class="mx-5 cursor-pointer hover:text-[#fab758] flex items-center gap-1">
+            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8" id="nav-menu">
+                <li class="cursor-pointer flex items-center gap-1">
                     Demos
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
-                    Pages
-                    <i class="fa-solid fa-angle-down text-sm"></i>
+                <li href="#" class="relative" id="dropDownbutton">
+                    <a href="#" class="cursor-pointer flex items-center gap-1" onclick="toggleDropdown()">
+                        Pages
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                        <div class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-7 top-[40px] w-[200px] shadow-md mt-3 space-y-2 hidden" id="dropdown">
+
+                            <div class="relative" id="servicesDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="serviceMenuDropdown(event)">
+                                    Services
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-4 absolute left-48 top-[1px] w-[150px] shadow-md space-y-2 hidden" id="service">
+                                        <div>Services I</div>
+                                        <div>Services II</div>
+                                    </div>
+                                </div>
+                                
+                            </div>                            
+
+                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">About <i class="fa-solid fa-angle-right"></i></div>
+                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Shop <i class="fa-solid fa-angle-right"></i></div>
+                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Contact <i class="fa-solid fa-angle-right"></i></div>
+                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Career <i class="fa-solid fa-angle-right"></i></div>
+                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Utility <i class="fa-solid fa-angle-right"></i></div>
+                            <div class="cursor-pointer hover:text-[#fab758] text-base">Pricing</div>
+                            <div class="cursor-pointer hover:text-[#fab758] text-base">One Page</div>
+                        </div>
+                    </a>
                 </li>
-                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                <li class="cursor-pointer flex items-center gap-1">
                     Projects 
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                <li class="cursor-pointer flex items-center gap-1">
                     Blog
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                <li class="cursor-pointer flex items-center gap-1">
                     Blocks
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li class="mx-5 cursor-pointer hover:text-[#fab758] items-center gap-1">
+                <li class="cursor-pointer flex items-center gap-1">
                     Documentation
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
             </ul>
-            <ul class="px-2 py-2 cursor-pointer">
+            <ul class="hidden lg:flex px-2 py-2 cursor-pointer gap-2">
                 <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
-                <li></li>
+                <li class=""><i class="fa-solid fa-circle-info"></i></li>
             </ul>
             <!-- Hamburger Menu -->
-             <div class="lg:hidden">
+             <div class="lg:hidden flex gap-3">
+                <ul class="flex items-center justify-between px-2 py-2 cursor-pointer gap-2">
+                    <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
+                    <li class=""><i class="fa-solid fa-circle-info"></i></li>
+                </ul>
                 <button class="text-3xl" onclick="handleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </button>
              </div>
         </nav>
         <!-- MOBILE MENU -->
-        <div class="lg:hidden hidden bg-white shadow-lg">
-            <ul class="flex flex-col font-semibold text-[#343f52] text-[17px]">
-                <li>Demos</li>
-                <li>Pages</li>
-                <li>Projects</li>
-                <li>Blog</li>
-                <li>Blocks</li>
-                <li>Documentation</li>
+        <div class="fixed lg:hidden block bg-[#1e2228] inset-0 p-7" id="nav-dialog">
+            <div class="text-white flex justify-between mt-2" id="nav-bar">
+                <h2 class="text-3xl font-bold">Sandbox</h2>
+                <button class="text-2xl" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="flex flex-col font-semibold text-[#fff] text-[17px] mt-9 gap-5">
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between"> 
+                    Demos
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Pages
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Projects
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Blog
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Blocks
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Documentation
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
             </ul>
         </div>
         <!-- Navbar end here -->
