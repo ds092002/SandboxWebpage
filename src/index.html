@@ -14,18 +14,18 @@
 <body class="bg-[#fff8ee] font-thic">
     <div>
         <!-- Navbar start here -->
-        <nav class="h-16 bg-white flex justify-between px-4 md:px-16 items-center" id="navbar">
+        <nav class="h-16 flex justify-between px-4 md:px-16 items-center container mx-auto" id="navbar">
             <!-- Logo -->
              <a href="" id="logo">
                  <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover">
              </a>
             <!-- Dekstop Menu -->
-            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8" id="nav-menu">
+            <ul class="hidden lg:flex font-semibold  text-[#343f52] text-[17px] space-x-8" id="nav-menu">
                 <li class="cursor-pointer flex items-center gap-1">
                     Demos
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li href="#" class="relative" id="dropDownbutton">
+                <li class="relative" id="dropDownbutton">
                     <a href="#" class="cursor-pointer flex items-center gap-1" onclick="toggleDropdown()">
                         Pages
                         <i class="fa-solid fa-angle-down text-sm"></i>
@@ -113,21 +113,132 @@
                         </div>
                     </a>
                 </li>
-                <li class="cursor-pointer flex items-center gap-1">
-                    Projects 
-                    <i class="fa-solid fa-angle-down text-sm"></i>
+                <li class="relative" id="projectDropdown">
+                    <a href="#" class="cursor-pointer flex items-center gap-1" onclick="projectDropdown()">
+                        Projects 
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                        <div class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-7 top-[40px] w-[420px] shadow-md mt-3 space-y-2 hidden" id="project">
+                            <div class="flex justify-between items-start space-x-6">
+                                <div class="text-base text-[#fab758]">
+                                    PROJECT PAGES
+                                    <div class="mt-2 text-[#343f52]">Projects I</div>
+                                    <div  class="tetx-[16px] text-[#343f52]">Projects II</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Projects III</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Projects IV</div>
+                                </div>
+                                <p class=" before:content-[''] before:absolute before:h-32 before:w-[1px] 
+                                before:left-[calc(50%-[-1]px)] before:bg-slate-300 before:rounded-full"></p>
+                                <div class="text-[#fab758]">
+                                    SINGLE PROJECTS
+                                    <div class="mt-2 tetx-[16px] text-[#343f52]">Single Projects I</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Single Projects II</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Single Projects III</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Single Projects IV</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </li>
-                <li class="cursor-pointer flex items-center gap-1">
-                    Blog
-                    <i class="fa-solid fa-angle-down text-sm"></i>
+                <li class="relative group" id="blogDropdown">
+                    <a href="#" class="cursor-pointer flex items-center gap-1">
+                        Blog
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>
+                    <div 
+                        class="rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[40px] w-[250px] shadow-md mt-3 space-y-2 hidden group-hover:block"
+                    >
+                        <div class="text-[16px]">Blog without Sidebar</div>
+                        <div class="text-[16px]">Blog with Sidebar</div>
+                        <div class="text-[16px]">Blog with Left Sidebar</div>
+                        <div class="flex items-center justify-between text-[16px]">
+                            Blog Posts 
+                            <i class="fa-solid fa-angle-right text-sm"></i>
+                        </div>
+                    </div>
                 </li>
+                
                 <li class="cursor-pointer flex items-center gap-1">
                     Blocks
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li class="cursor-pointer flex items-center gap-1">
-                    Documentation
-                    <i class="fa-solid fa-angle-down text-sm"></i>
+                <li class="relative group" id="documentationDropdown">
+                    <a href="#" class="cursor-pointer flex items-center gap-1">
+                        Documentation
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                        <div class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-96 top-[40px] w-[1000px] shadow-md mt-3 space-y-2 hidden group-hover:block">
+                            <div class="flex justify-between items-start"> 
+                                <div class="">
+                                    <div class="font-bold text-[#fab758]">USAGE</div>
+                                      <div class="grid grid-cols-2 gap-4 text-[16px]">
+                                            <div class="mt-2 space-y-2">
+                                                <div>Get Started</div>
+                                                <div>Forms</div>
+                                                <div>FAQ</div>
+                                            </div>
+                                        <div class="mt-2 space-y-2 text-[16px]">
+                                            <div>Changelog</div>
+                                            <div>Credits</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-14 text-[#fab758]">STYLEGUIDE</div>
+                                    <div class="grid grid-cols-2 gap-4 mt-2 text-[16px]">
+                                        <div class=" space-y-2">
+                                            <div>Colors</div>
+                                            <div>Fonts</div>
+                                            <div>SVG Icons</div>
+                                            <div>Font Icons</div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div>Illustrations</div>
+                                            <div>Background</div>
+                                            <div>Misc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class=" before:content-[''] before:absolute before:h-80 before:w-[1px] top-5
+                                before:left-[calc(50%-[-1]px)] before:bg-slate-300 before:rounded-full"></p>
+                                <div>
+                                    <div class="font-bold text-[#fab758]">ELEMENTS</div>
+                                    <div class="grid grid-cols-3 gap-4 text-[16px] mt-2">
+                                        <div class=" space-y-2">
+                                            <div>Accordion</div>
+                                            <div>Alerts</div>
+                                            <div>Animations</div>
+                                            <div>Avatars</div>
+                                            <div>Background</div>
+                                            <div>Badges</div>
+                                            <div>Buttons</div>
+                                            <div>Card</div>
+                                            <div>Carousel</div>
+                                        </div>
+                                        <div class=" space-y-2">
+                                            <div>Dividers</div>
+                                            <div>Form Elements</div>
+                                            <div>Iamge Hover</div>
+                                            <div>Image Mask</div>
+                                            <div>Lightbox</div>
+                                            <div>Media Player</div>
+                                            <div>Modal</div>
+                                            <div>Pagination</div>
+                                            <div>Progressbar</div>
+                                        </div>
+                                        <div class=" space-y-2">
+                                            <div>Shadows</div>
+                                            <div>Shapes</div>
+                                            <div>Tables</div>
+                                            <div>Tab</div>
+                                            <div>Text Animations</div>
+                                            <div>Text Highlights</div>
+                                            <div>Tiles</div>
+                                            <div>Tooltips & Popovers</div>
+                                            <div>Typography</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </li>
             </ul>
             <ul class="hidden lg:flex px-2 py-2 cursor-pointer gap-2">
@@ -146,22 +257,88 @@
              </div>
         </nav>
         <!-- MOBILE MENU -->
-        <div class="fixed lg:hidden block bg-[#1e2228] inset-0 p-7" id="nav-dialog">
+        <div class="fixed lg:hidden block bg-[#1e2228] inset-0 p-7 " id="nav-dialog">
             <div class="text-white flex justify-between mt-2" id="nav-bar">
                 <h2 class="text-3xl font-bold">Sandbox</h2>
                 <button class="text-2xl" onclick="handleMenu()">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <ul class="flex flex-col font-semibold text-[#fff] text-[17px] mt-9 gap-5">
-                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between"> 
-                    Demos
-                    <i class="fa-solid fa-angle-down text-sm"></i>
+            <!-- Main Menu -->
+            <ul class="flex flex-col font-semibold text-[#fff] text-[17px] mt-9 gap-5 overflow-y-auto max-h-[calc(100%-100px)]">
+                <li class="cursor-pointer"> 
+                    <div class="flex items-center justify-between" onclick="toggleDemoDropdown('demosDropdown')">
+                        Demos
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </div>
+                    <div class="">
+                        <ul class="hidden mt-2 ml-3 text-[16px] space-y-2 p-3" id="demosDropdown">      
+                            <li>Demo 1</li>
+                            <li>Demo 2</li>
+                            <li>Demo 3</li>
+                            <li>Demo 4</li>
+                            <li>Demo 5</li>
+                            <li>Demo 6</li>
+                            <li>Demo 7</li>
+                            <li>Demo 8</li>
+                            <li>Demo 9</li>
+                            <li>Demo 10</li>
+                            <li>Demo 11</li>
+                            <li>Demo 12</li>
+                            <li>Demo 13</li>
+                            <li>Demo 14</li>
+                            <li>Demo 15</li>
+                            <li>Demo 16</li>
+                            <li>Demo 17</li>
+                            <li>Demo 18</li>
+                            <li>Demo 19</li>
+                            <li>Demo 20</li>
+                            <li>Demo 21</li>
+                            <li>Demo 22</li>
+                            <li>Demo 23</li>
+                            <li>Demo 24</li>
+                            <li>Demo 25</li>
+                            <li>Demo 26</li>
+                            <li>Demo 27</li>
+                            <li>Demo 28</li>
+                            <li>Demo 29</li>
+                            <li>Demo 30</li>
+                            <li>Demo 31</li>
+                            <li>Demo 32</li>
+                            <li>Demo 33</li>
+                            <li>Demo 34</li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
-                    Pages
-                    <i class="fa-solid fa-angle-down text-sm"></i>
-                </li>
+
+                <li class="cursor-pointer">
+                    <!-- Parent Dropdown (Pages) -->
+                    <div class="flex items-center justify-between" onclick="togglePagesDropdown('pagesDropdown')">
+                      Pages
+                      <i class="fa-solid fa-angle-down text-sm"></i>
+                    </div>
+                    <ul id="pagesDropdown" class="hidden mt-2 ml-3 text-[16px] space-y-2 p-3">
+                      <!-- Nested Dropdown (Services) -->
+                      <li>
+                        <div class="flex items-center justify-between" onclick="toggleServiceDropdown('servicesDropdown', event)">
+                          Services
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul class="hidden mt-2 ml-5 text-[16px] space-y-2" id="servicesDropdown">
+                          <li>Services I</li>
+                          <li>Services II</li>
+                        </ul>
+                      </li>
+                      <li>About</li>
+                      <li>Shop</li>
+                      <li>Contact</li>
+                      <li>Career</li>
+                      <li>Utility</li>
+                      <li>Pricing</li>
+                      <li>One Page</li>
+                    </ul>
+                  </li>
+                  
                 <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
                     Projects
                     <i class="fa-solid fa-angle-down text-sm"></i>

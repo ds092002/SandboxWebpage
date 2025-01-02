@@ -15,14 +15,16 @@ function toggleDropdown() {
 //     serviceDropdown.classList.toggle('hidden');
 // }
 
-function serviceMenuDropdown(isHover) {
-    let serviceDropdown = document.querySelector('#servicesDropdown #service');
-    if (isHover) {
-        serviceDropdown.classList.remove('hidden')
-    }else{
-        serviceDropdown.classList.add('hidden')
+function serviceMenuDropdown(show) {
+    const serviceDropdown = document.querySelector('#servicesDropdown #service');
+    if (show) {
+        serviceDropdown.classList.remove('hidden');
+    } else {
+        serviceDropdown.classList.add('hidden');
     }
 }
+
+
 
 function aboutMenuDropdown(event){
     event.stopPropagation();
@@ -53,6 +55,40 @@ function utilityDropdown(event){
     let utilityDropdown = document.querySelector('#utilityDropdown #utility');
     utilityDropdown.classList.toggle('hidden')
 }
+
+
+function projectDropdown(){
+    let projectDropdown = document.querySelector('#projectDropdown #project');
+    projectDropdown.classList.toggle('hidden');
+}
+
+
+function toggleDemoDropdown(id) {
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden'); // Toggles the visibility of the dropdown
+  }
+
+  function togglePagesDropdown(id) {
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden'); // Toggles visibility
+  }
+  
+  function toggleServiceDropdown(id, event) {
+    event.stopPropagation(); // Prevents parent event from triggering
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden'); // Toggles visibility
+  }
+  
+// function handleMobileMenu() {
+//     const navdialog = document.getElementById('nav-dialog');
+//     if (navdialog.classList.contains('-translate-x-full')) {
+//         navdialog.classList.remove('-translate-x-full');
+//         navdialog.classList.add('translate-x-0')
+//     } else {
+//         navdialog.classList.add('-translate-x-full');
+//         navdialog.classList.remove('translate-x-0');    
+//     }
+// }
 // const navbar = document.getElementById('navbar');
 // window.addEventListener('scroll', () => {
 //     if (window.scrollY > 0) {
