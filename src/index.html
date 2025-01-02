@@ -31,23 +31,83 @@
                         <i class="fa-solid fa-angle-down text-sm"></i>
                         <div class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-7 top-[40px] w-[200px] shadow-md mt-3 space-y-2 hidden" id="dropdown">
 
-                            <div class="relative" id="servicesDropdown">
+                            <div class="relative" id="servicesDropdown" onmouseenter="serviceMenuDropdown(true)" onmouseleave="serviceMenuDropdown(false)">
                                 <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="serviceMenuDropdown(event)">
                                     Services
                                     <i class="fa-solid fa-angle-right"></i>
-                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-4 absolute left-48 top-[1px] w-[150px] shadow-md space-y-2 hidden" id="service">
-                                        <div>Services I</div>
-                                        <div>Services II</div>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2 hidden" id="service">
+                                        <div class="text-sm">Services I</div>
+                                        <div class="text-sm">Services II</div>
                                     </div>
                                 </div>
-                                
                             </div>                            
 
-                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">About <i class="fa-solid fa-angle-right"></i></div>
-                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Shop <i class="fa-solid fa-angle-right"></i></div>
-                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Contact <i class="fa-solid fa-angle-right"></i></div>
-                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Career <i class="fa-solid fa-angle-right"></i></div>
-                            <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">Utility <i class="fa-solid fa-angle-right"></i></div>
+                            <div class="relative" id="aboutDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="aboutMenuDropdown(event)">
+                                    About 
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2 hidden" id="about">
+                                        <div class="text-sm">About I</div>
+                                        <div class="text-sm">About II</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="shopDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="shopDropdown(event)">
+                                    Shop 
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md
+                                    space-y-2 " id="shop">
+                                        <div class="text-sm">Shop I</div>
+                                        <div class="text-sm">Shop II</div>
+                                        <div class="text-sm">Product Page</div>
+                                        <div class="text-sm">Shopping Cart</div>
+                                        <div class="text-sm">Checkout</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="contactDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="contactDropdown(event)">
+                                    Contact 
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2" id="contact">
+                                    <div class="text-sm">Contact I</div>
+                                    <div class="text-sm">Contact II</div>
+                                    <div class="text-sm">Contact III</div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="careerDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="careerDropdown(event)">
+                                    Career
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2" id="career">
+                                    <div class="text-sm">Job Listing I</div>
+                                    <div class="text-sm">Job Listing II</div>
+                                    <div class="text-sm">Job Description</div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="utilityDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base" onclick="utilityDropdown(event)">
+                                    Utility 
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2" id="utility">
+                                        <div>404 Not Found</div>
+                                        <div>Page Loader</div>
+                                        <div>Sign In I</div>
+                                        <div>Sign In II</div>
+                                        <div>Sign Out I</div>
+                                        <div>Sign Out II</div>
+                                        <div>Terms</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="cursor-pointer hover:text-[#fab758] text-base">Pricing</div>
                             <div class="cursor-pointer hover:text-[#fab758] text-base">One Page</div>
                         </div>

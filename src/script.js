@@ -8,13 +8,51 @@ function toggleDropdown() {
     dropdown.classList.toggle('hidden');
 }
 
-function serviceMenuDropdown(event) {
-    // Stop event propagation to prevent closing the parent dropdown
-    event.stopPropagation();
-    let shopDropdown = document.querySelector('#servicesDropdown #service');
-    shopDropdown.classList.toggle('hidden');
+// function serviceMenuDropdown(event) {
+//     // Stop event propagation to prevent closing the parent dropdown
+//     event.stopPropagation();
+//     let serviceDropdown = document.querySelector('#servicesDropdown #service');
+//     serviceDropdown.classList.toggle('hidden');
+// }
+
+function serviceMenuDropdown(isHover) {
+    let serviceDropdown = document.querySelector('#servicesDropdown #service');
+    if (isHover) {
+        serviceDropdown.classList.remove('hidden')
+    }else{
+        serviceDropdown.classList.add('hidden')
+    }
 }
 
+function aboutMenuDropdown(event){
+    event.stopPropagation();
+    let aboutDropdown = document.querySelector('#aboutDropdown #about');
+    aboutDropdown.classList.toggle('hidden')
+}
+
+function shopDropdown(event){
+    event.stopPropagation();
+    let shopDropdown = document.querySelector('#shopDropdown #shop');
+    shopDropdown.classList.toggle('hidden')
+}
+
+function contactDropdown(event){
+    event.stopPropagation();
+    let contactDropdown = document.querySelector('#contactDropdown #contact');
+    contactDropdown.classList.toggle('hidden')
+}
+
+function careerDropdown(event){
+    event.stopPropagation(event);
+    let careerDropdown = document.querySelector('#careerDropdown #career');
+    careerDropdown.classList.toggle('hidden')
+}
+
+function utilityDropdown(event){
+    event.stopPropagation(event);
+    let utilityDropdown = document.querySelector('#utilityDropdown #utility');
+    utilityDropdown.classList.toggle('hidden')
+}
 // const navbar = document.getElementById('navbar');
 // window.addEventListener('scroll', () => {
 //     if (window.scrollY > 0) {
