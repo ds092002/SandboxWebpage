@@ -1,486 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sandbox</title>
     <link rel="stylesheet" href="output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <body class="bg-[#fff8ee] font-thic">
+<body class="bg-[#fff8ee] font-thic">
     <div>
-      <!-- Navbar start here -->
-      <nav
-        class="h-16 flex justify-between px-4 md:px-16 items-center container mx-auto"
-        id="navbar"
-      >
-        <!-- Logo -->
-        <a href="" id="logo">
-          <img
-            src="./assets (6)/asset 0.png"
-            alt="Sandbox"
-            class="max-h-7 object-cover"
-          />
-        </a>
-        <!-- Dekstop Menu -->
-        <ul
-          class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8"
-          id="nav-menu"
-        >
-          <li class="cursor-pointer flex items-center gap-1 py-4">
-            Demos
-            <i class="fa-solid fa-angle-down text-sm"></i>
-          </li>
-          <li class="relative py-4" id="dropDownbutton">
-            <a
-              href="#"
-              class="cursor-pointer flex items-center gap-1"
-              onclick="toggleDropdown()"
-            >
-              Pages
-              <i class="fa-solid fa-angle-down text-sm"></i>
-              <div
-                class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-7 top-[40px] w-[200px] shadow-md mt-3 space-y-2 hidden"
-                id="dropdown"
-              >
-                <div
-                  class="relative"
-                  id="servicesDropdown"
-                  onmouseenter="serviceMenuDropdown(true)"
-                  onmouseleave="serviceMenuDropdown(false)"
-                >
-                  <div
-                    class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                    onclick="serviceMenuDropdown(event)"
-                  >
-                    Services
-                    <i class="fa-solid fa-angle-right"></i>
-                    <div
-                      class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2 hidden px-7"
-                      id="service"
-                    >
-                      <div class="text-[16px]">Services I</div>
-                      <div class="text-[16px]">Services II</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="relative" id="aboutDropdown">
-                  <div
-                    class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                    onclick="aboutMenuDropdown(event)"
-                  >
-                    About
-                    <i class="fa-solid fa-angle-right"></i>
-                    <div
-                      class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2 hidden"
-                      id="about"
-                    >
-                      <div class="text-sm">About I</div>
-                      <div class="text-sm">About II</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="relative" id="shopDropdown">
-                  <div
-                    class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                    onclick="shopDropdown(event)"
-                  >
-                    Shop
-                    <i class="fa-solid fa-angle-right"></i>
-                    <div
-                      class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                      id="shop"
-                    >
-                      <div class="text-sm">Shop I</div>
-                      <div class="text-sm">Shop II</div>
-                      <div class="text-sm">Product Page</div>
-                      <div class="text-sm">Shopping Cart</div>
-                      <div class="text-sm">Checkout</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="relative" id="contactDropdown">
-                  <div
-                    class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                    onclick="contactDropdown(event)"
-                  >
-                    Contact
-                    <i class="fa-solid fa-angle-right"></i>
-                  </div>
-                  <div
-                    class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                    id="contact"
-                  >
-                    <div class="text-sm">Contact I</div>
-                    <div class="text-sm">Contact II</div>
-                    <div class="text-sm">Contact III</div>
-                  </div>
-                </div>
-
-                <div class="relative" id="careerDropdown">
-                  <div
-                    class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                    onclick="careerDropdown(event)"
-                  >
-                    Career
-                    <i class="fa-solid fa-angle-right"></i>
-                  </div>
-                  <div
-                    class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                    id="career"
-                  >
-                    <div class="text-sm">Job Listing I</div>
-                    <div class="text-sm">Job Listing II</div>
-                    <div class="text-sm">Job Description</div>
-                  </div>
-                </div>
-
-                <div class="relative" id="utilityDropdown">
-                  <div
-                    class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                    onclick="utilityDropdown(event)"
-                  >
-                    Utility
-                    <i class="fa-solid fa-angle-right"></i>
-                    <div
-                      class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                      id="utility"
-                    >
-                      <div>404 Not Found</div>
-                      <div>Page Loader</div>
-                      <div>Sign In I</div>
-                      <div>Sign In II</div>
-                      <div>Sign Out I</div>
-                      <div>Sign Out II</div>
-                      <div>Terms</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="cursor-pointer hover:text-[#fab758] text-base">
-                  Pricing
-                </div>
-                <div class="cursor-pointer hover:text-[#fab758] text-base">
-                  One Page
-                </div>
-              </div>
+        <!-- Navbar start here -->
+        <nav class="h-16 flex justify-between px-4 md:px-16 items-center container mx-auto" id="navbar">
+            <!-- Logo -->
+            <a href="" id="logo">
+                <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover" />
             </a>
-          </li>
-          <li class="relative py-4" id="projectDropdown">
-            <a
-              href="#"
-              class="cursor-pointer flex items-center gap-1"
-              onclick="projectDropdown()"
-            >
-              Projects
-              <i class="fa-solid fa-angle-down text-sm"></i>
-              <div
-                class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-7 top-[40px] w-[420px] shadow-md mt-3 space-y-2 hidden"
-                id="project"
-              >
-                <div class="flex justify-between items-start space-x-6">
-                  <div class="text-base text-[#fab758]">
-                    PROJECT PAGES
-                    <div class="mt-2 text-[#343f52]">Projects I</div>
-                    <div class="tetx-[16px] text-[#343f52]">Projects II</div>
-                    <div class="tetx-[16px] text-[#343f52]">Projects III</div>
-                    <div class="tetx-[16px] text-[#343f52]">Projects IV</div>
-                  </div>
-                  <p
-                    class="before:content-[''] before:absolute before:h-32 before:w-[1px] before:left-[calc(50%-[-1]px)] before:bg-slate-300 before:rounded-full"
-                  ></p>
-                  <div class="text-[#fab758]">
-                    SINGLE PROJECTS
-                    <div class="mt-2 tetx-[16px] text-[#343f52]">
-                      Single Projects I
-                    </div>
-                    <div class="tetx-[16px] text-[#343f52]">
-                      Single Projects II
-                    </div>
-                    <div class="tetx-[16px] text-[#343f52]">
-                      Single Projects III
-                    </div>
-                    <div class="tetx-[16px] text-[#343f52]">
-                      Single Projects IV
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="relative group flex items-center gap-1 py-4"
-            id="blogDropdown"
-          >
-            <a href="#" class="cursor-pointer flex items-center" onclick=""
-              >Blog<i class="fa-solid fa-angle-down text-sm"></i>
-              <ul
-                class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[40px] min-w-[250px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover:block"
-              >
-                <li class="text-[16px]">
-                  <a href="#" class="">
-                    Blog without Sidebar
-                  </a>
+            <!-- Dekstop Menu -->
+            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8" id="nav-menu">
+                <li class="cursor-pointer flex items-center gap-1 py-4">
+                    Demos
+                    <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-                <li class="text-[16px]">Blog with Sidebar</li>
-                <li class="text-[16px]">Blog with Left Sidebar</li>
-                <li class="flex items-center justify-between text-[16px]">
-                  Blog Posts
-                  <i class="fa-solid fa-angle-right text-sm"></i>
-                </li>
-              </ul>
-            </a>
-          </li>
+                <li class="relative group py-4" id="dropDownbutton">
+                    <a href="#" class="cursor-pointer flex items-center gap-1" onclick="toggleDropdown()">
+                        Pages
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                        <div class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[40px] min-w-[250px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover:block"
+                            id="dropdown">
+                            <div class="relative" id="servicesDropdown" onmouseenter="serviceMenuDropdown(true)"
+                                onmouseleave="serviceMenuDropdown(false)">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
+                                    onclick="serviceMenuDropdown(event)">
+                                    Services
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-56 top-[1px] w-[200px] shadow-md space-y-2 px-20"
+                                        id="service">
+                                        <div class="text-[16px]">Services I</div>
+                                        <div class="text-[16px]">Services II</div>
+                                    </div>
+                                </div>
+                            </div>
 
-          <li class="cursor-pointer flex items-center gap-1">
+                            <div class="relative" id="aboutDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
+                                    onclick="aboutMenuDropdown(event)">
+                                    About
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2 hidden"
+                                        id="about">
+                                        <div class="text-sm">About I</div>
+                                        <div class="text-sm">About II</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="shopDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
+                                    onclick="shopDropdown(event)">
+                                    Shop
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
+                                        id="shop">
+                                        <div class="text-sm">Shop I</div>
+                                        <div class="text-sm">Shop II</div>
+                                        <div class="text-sm">Product Page</div>
+                                        <div class="text-sm">Shopping Cart</div>
+                                        <div class="text-sm">Checkout</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="contactDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
+                                    onclick="contactDropdown(event)">
+                                    Contact
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
+                                    id="contact">
+                                    <div class="text-sm">Contact I</div>
+                                    <div class="text-sm">Contact II</div>
+                                    <div class="text-sm">Contact III</div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="careerDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
+                                    onclick="careerDropdown(event)">
+                                    Career
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
+                                    id="career">
+                                    <div class="text-sm">Job Listing I</div>
+                                    <div class="text-sm">Job Listing II</div>
+                                    <div class="text-sm">Job Description</div>
+                                </div>
+                            </div>
+
+                            <div class="relative" id="utilityDropdown">
+                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
+                                    onclick="utilityDropdown(event)">
+                                    Utility
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
+                                        id="utility">
+                                        <div>404 Not Found</div>
+                                        <div>Page Loader</div>
+                                        <div>Sign In I</div>
+                                        <div>Sign In II</div>
+                                        <div>Sign Out I</div>
+                                        <div>Sign Out II</div>
+                                        <div>Terms</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cursor-pointer hover:text-[#fab758] text-base">
+                                Pricing
+                            </div>
+                            <div class="cursor-pointer hover:text-[#fab758] text-base">
+                                One Page
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="relative group py-4" id="projectDropdown">
+                    <a href="#" class="cursor-pointer flex items-center gap-1" onclick="projectDropdown()">
+                        Projects
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                        <div class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[40px] min-w-[450px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover:block"
+                            id="project">
+                            <div class="flex justify-between items-start space-x-6">
+                                <div class="text-base text-[#fab758]">
+                                    PROJECT PAGES
+                                    <div class="mt-2 text-[#343f52]">Projects I</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Projects II</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Projects III</div>
+                                    <div class="tetx-[16px] text-[#343f52]">Projects IV</div>
+                                </div>
+                                <p
+                                    class="before:content-[''] before:absolute before:h-32 before:w-[1px] before:left-[calc(50%-[-1]px)] before:bg-slate-300 before:rounded-full">
+                                </p>
+                                <div class="text-[#fab758]">
+                                    SINGLE PROJECTS
+                                    <div class="mt-2 tetx-[16px] text-[#343f52]">
+                                        Single Projects I
+                                    </div>
+                                    <div class="tetx-[16px] text-[#343f52]">
+                                        Single Projects II
+                                    </div>
+                                    <div class="tetx-[16px] text-[#343f52]">
+                                        Single Projects III
+                                    </div>
+                                    <div class="tetx-[16px] text-[#343f52]">
+                                        Single Projects IV
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="relative group flex items-center gap-1 py-4" id="blogDropdown">
+                    <a href="#" class="cursor-pointer flex items-center" onclick="">Blog<i
+                            class="fa-solid fa-angle-down text-sm"></i>
+                        <ul
+                            class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[40px] min-w-[250px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover:block">
+                            <li class="text-[16px]">
+                                <a href="#" class=""> Blog without Sidebar </a>
+                            </li>
+                            <li class="text-[16px]">Blog with Sidebar</li>
+                            <li class="text-[16px]">Blog with Left Sidebar</li>
+                            <li class="flex items-center justify-between text-[16px]">
+                                Blog Posts
+                                <i class="fa-solid fa-angle-right text-sm"></i>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+
+                <li class="cursor-pointer flex items-center gap-1">
                     Blocks
                     <i class="fa-solid fa-angle-down text-sm"></i>
                 </li>
-          <li class="relative group py-4" id="documentationDropdown">
-            <a href="#" class="cursor-pointer flex items-center gap-1">
-              Documentation
-              <i class="fa-solid fa-angle-down text-sm"></i>
-              <div
-                class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-[600px] top-[40px] w-[1000px] shadow-md mt-3 space-y-2 hidden group-hover:block"
-              >
-                <div class="flex justify-evenly items-start">
-                  <div class="">
-                    <div class="font-bold text-[#fab758]">USAGE</div>
-                    <div class="grid grid-cols-2 gap-4 text-[16px]">
-                      <div class="mt-2 space-y-2">
-                        <div>Get Started</div>
-                        <div>Forms</div>
-                        <div>FAQ</div>
-                      </div>
-                      <div class="mt-2 space-y-2 text-[16px]">
-                        <div>Changelog</div>
-                        <div>Credits</div>
-                      </div>
-                    </div>
+                <li class="relative group py-4" id="documentationDropdown">
+                    <a href="#" class="cursor-pointer flex items-center gap-1">
+                        Documentation
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                        <div
+                            class="rounded-lg border-1 border-slate-300 bg-white p-7 absolute -left-[600px] top-[40px] w-[1000px] shadow-md mt-3 space-y-2 hidden group-hover:block">
+                            <div class="flex justify-evenly items-start">
+                                <div class="">
+                                    <div class="font-bold text-[#fab758]">USAGE</div>
+                                    <div class="grid grid-cols-2 gap-4 text-[16px]">
+                                        <div class="mt-2 space-y-2">
+                                            <div>Get Started</div>
+                                            <div>Forms</div>
+                                            <div>FAQ</div>
+                                        </div>
+                                        <div class="mt-2 space-y-2 text-[16px]">
+                                            <div>Changelog</div>
+                                            <div>Credits</div>
+                                        </div>
+                                    </div>
 
-                    <div class="mt-14 text-[#fab758]">STYLEGUIDE</div>
-                    <div class="grid grid-cols-2 gap-4 mt-2 text-[16px]">
-                      <div class="space-y-2">
-                        <div>Colors</div>
-                        <div>Fonts</div>
-                        <div>SVG Icons</div>
-                        <div>Font Icons</div>
-                      </div>
-                      <div class="space-y-2">
-                        <div>Illustrations</div>
-                        <div>Background</div>
-                        <div>Misc</div>
-                      </div>
-                    </div>
-                  </div>
-                  <p
-                    class="before:content-[''] before:absolute before:h-80 before:w-[1px] top-5 before:left-[calc(50%-[-1]px)] before:bg-slate-300 before:rounded-full"
-                  ></p>
-                  <div>
-                    <div class="font-bold text-[#fab758]">ELEMENTS</div>
-                    <div class="grid grid-cols-3 gap-4 text-[16px] mt-2">
-                      <div class="space-y-2">
-                        <div>Accordion</div>
-                        <div>Alerts</div>
-                        <div>Animations</div>
-                        <div>Avatars</div>
-                        <div>Background</div>
-                        <div>Badges</div>
-                        <div>Buttons</div>
-                        <div>Card</div>
-                        <div>Carousel</div>
-                      </div>
-                      <div class="space-y-2">
-                        <div>Dividers</div>
-                        <div>Form Elements</div>
-                        <div>Iamge Hover</div>
-                        <div>Image Mask</div>
-                        <div>Lightbox</div>
-                        <div>Media Player</div>
-                        <div>Modal</div>
-                        <div>Pagination</div>
-                        <div>Progressbar</div>
-                      </div>
-                      <div class="space-y-2">
-                        <div>Shadows</div>
-                        <div>Shapes</div>
-                        <div>Tables</div>
-                        <div>Tab</div>
-                        <div>Text Animations</div>
-                        <div>Text Highlights</div>
-                        <div>Tiles</div>
-                        <div>Tooltips & Popovers</div>
-                        <div>Typography</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <ul class="hidden lg:flex px-2 py-2 cursor-pointer gap-2">
-          <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
-          <li class=""><i class="fa-solid fa-circle-info"></i></li>
-        </ul>
-        <!-- Hamburger Menu -->
-        <div class="lg:hidden flex gap-3">
-          <ul
-            class="flex items-center justify-between px-2 py-2 cursor-pointer gap-2"
-          >
-            <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
-            <li class=""><i class="fa-solid fa-circle-info"></i></li>
-          </ul>
-          <button class="text-3xl" onclick="handleMenu()">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-      </nav>
-      <!-- MOBILE MENU -->
-      <div
-        class="fixed lg:hidden block bg-[#1e2228] inset-0 p-7"
-        id="nav-dialog"
-      >
-        <div class="text-white flex justify-between mt-2" id="nav-bar">
-          <h2 class="text-3xl font-bold">Sandbox</h2>
-          <button class="text-2xl" onclick="handleMenu()">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <!-- Main Menu -->
-        <ul
-          class="flex flex-col font-semibold text-[#fff] text-[17px] mt-9 gap-5 overflow-y-auto max-h-[calc(100%-100px)]"
-        >
-          <li class="cursor-pointer">
-            <div
-              class="flex items-center justify-between"
-              onclick="toggleDemoDropdown('demosDropdown')"
-            >
-              Demos
-              <i class="fa-solid fa-angle-down text-sm"></i>
-            </div>
-            <div class="">
-              <ul
-                class="hidden mt-2 ml-3 text-[16px] space-y-2 p-3"
-                id="demosDropdown"
-              >
-                <li>Demo 1</li>
-                <li>Demo 2</li>
-                <li>Demo 3</li>
-                <li>Demo 4</li>
-                <li>Demo 5</li>
-                <li>Demo 6</li>
-                <li>Demo 7</li>
-                <li>Demo 8</li>
-                <li>Demo 9</li>
-                <li>Demo 10</li>
-                <li>Demo 11</li>
-                <li>Demo 12</li>
-                <li>Demo 13</li>
-                <li>Demo 14</li>
-                <li>Demo 15</li>
-                <li>Demo 16</li>
-                <li>Demo 17</li>
-                <li>Demo 18</li>
-                <li>Demo 19</li>
-                <li>Demo 20</li>
-                <li>Demo 21</li>
-                <li>Demo 22</li>
-                <li>Demo 23</li>
-                <li>Demo 24</li>
-                <li>Demo 25</li>
-                <li>Demo 26</li>
-                <li>Demo 27</li>
-                <li>Demo 28</li>
-                <li>Demo 29</li>
-                <li>Demo 30</li>
-                <li>Demo 31</li>
-                <li>Demo 32</li>
-                <li>Demo 33</li>
-                <li>Demo 34</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="cursor-pointer">
-            <!-- Parent Dropdown (Pages) -->
-            <div
-              class="flex items-center justify-between"
-              onclick="togglePagesDropdown('pagesDropdown')"
-            >
-              Pages
-              <i class="fa-solid fa-angle-down text-sm"></i>
-            </div>
-            <ul
-              id="pagesDropdown"
-              class="hidden mt-2 ml-3 text-[16px] space-y-2 p-3"
-            >
-              <!-- Nested Dropdown (Services) -->
-              <li class="cursor-pointer">
-                <div
-                  class="flex items-center justify-between"
-                  onclick="toggleServiceDropdown('servicesDropdown1')"
-                >
-                  Services
-                  <i class="fa-solid fa-angle-down"></i>
-                </div>
-                <ul
-                id="servicesDropdown1"
-                  class="hidden mt-2 ml-5 text-[16px] space-y-2"
-                  
-                >
-                  <li>Services I</li>
-                  <li>Services II</li>
-                </ul>
-              </li>
-              <li>About</li>
-              <li>Shop</li>
-              <li>Contact</li>
-              <li>Career</li>
-              <li>Utility</li>
-              <li>Pricing</li>
-              <li>One Page</li>
+                                    <div class="mt-14 text-[#fab758]">STYLEGUIDE</div>
+                                    <div class="grid grid-cols-2 gap-4 mt-2 text-[16px]">
+                                        <div class="space-y-2">
+                                            <div>Colors</div>
+                                            <div>Fonts</div>
+                                            <div>SVG Icons</div>
+                                            <div>Font Icons</div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div>Illustrations</div>
+                                            <div>Background</div>
+                                            <div>Misc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p
+                                    class="before:content-[''] before:absolute before:h-80 before:w-[1px] top-5 before:left-[calc(50%-[-1]px)] before:bg-slate-300 before:rounded-full">
+                                </p>
+                                <div>
+                                    <div class="font-bold text-[#fab758]">ELEMENTS</div>
+                                    <div class="grid grid-cols-3 gap-4 text-[16px] mt-2">
+                                        <div class="space-y-2">
+                                            <div>Accordion</div>
+                                            <div>Alerts</div>
+                                            <div>Animations</div>
+                                            <div>Avatars</div>
+                                            <div>Background</div>
+                                            <div>Badges</div>
+                                            <div>Buttons</div>
+                                            <div>Card</div>
+                                            <div>Carousel</div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div>Dividers</div>
+                                            <div>Form Elements</div>
+                                            <div>Iamge Hover</div>
+                                            <div>Image Mask</div>
+                                            <div>Lightbox</div>
+                                            <div>Media Player</div>
+                                            <div>Modal</div>
+                                            <div>Pagination</div>
+                                            <div>Progressbar</div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div>Shadows</div>
+                                            <div>Shapes</div>
+                                            <div>Tables</div>
+                                            <div>Tab</div>
+                                            <div>Text Animations</div>
+                                            <div>Text Highlights</div>
+                                            <div>Tiles</div>
+                                            <div>Tooltips & Popovers</div>
+                                            <div>Typography</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
             </ul>
-          </li>
+            <ul class="hidden lg:flex px-2 py-2 cursor-pointer gap-2">
+                <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
+                <li class=""><i class="fa-solid fa-circle-info"></i></li>
+            </ul>
+            <!-- Hamburger Menu -->
+            <div class="lg:hidden flex gap-3">
+                <ul class="flex items-center justify-between px-2 py-2 cursor-pointer gap-2">
+                    <li>EN <i class="fa-solid fa-angle-down text-sm"></i></li>
+                    <li class=""><i class="fa-solid fa-circle-info"></i></li>
+                </ul>
+                <button class="text-3xl" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- MOBILE MENU -->
+        <div class="fixed lg:hidden block bg-[#1e2228] inset-0  max-w-[calc(100%-10%)] p-7" id="nav-dialog">
+            <div class="text-white flex justify-between mt-2" id="nav-bar">
+                <h2 class="text-3xl font-bold">Sandbox</h2>
+                <button class="text-2xl" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- Main Menu -->
+            <ul
+                class="flex flex-col font-semibold text-[#fff] text-[17px] mt-9 gap-5 overflow-y-auto max-h-[calc(100%-100px)]">
+                <li class="cursor-pointer">
+                    <div class="flex items-center justify-between" onclick="toggleDemoDropdown('demosDropdown')">
+                        Demos
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </div>
+                    <div class="">
+                        <ul class="hidden mt-2 ml-3 text-[16px] space-y-2 p-3" id="demosDropdown">
+                            <li>Demo 1</li>
+                            <li>Demo 2</li>
+                            <li>Demo 3</li>
+                            <li>Demo 4</li>
+                            <li>Demo 5</li>
+                            <li>Demo 6</li>
+                            <li>Demo 7</li>
+                            <li>Demo 8</li>
+                            <li>Demo 9</li>
+                            <li>Demo 10</li>
+                            <li>Demo 11</li>
+                            <li>Demo 12</li>
+                            <li>Demo 13</li>
+                            <li>Demo 14</li>
+                            <li>Demo 15</li>
+                            <li>Demo 16</li>
+                            <li>Demo 17</li>
+                            <li>Demo 18</li>
+                            <li>Demo 19</li>
+                            <li>Demo 20</li>
+                            <li>Demo 21</li>
+                            <li>Demo 22</li>
+                            <li>Demo 23</li>
+                            <li>Demo 24</li>
+                            <li>Demo 25</li>
+                            <li>Demo 26</li>
+                            <li>Demo 27</li>
+                            <li>Demo 28</li>
+                            <li>Demo 29</li>
+                            <li>Demo 30</li>
+                            <li>Demo 31</li>
+                            <li>Demo 32</li>
+                            <li>Demo 33</li>
+                            <li>Demo 34</li>
+                        </ul>
+                    </div>
+                </li>
 
-          <li
-            class="cursor-pointer hover:text-[#fab758] flex items-center justify-between"
-          >
-            Projects
-            <i class="fa-solid fa-angle-down text-sm"></i>
-          </li>
-          <li
-            class="cursor-pointer hover:text-[#fab758] flex items-center justify-between"
-          >
-            Blog
-            <i class="fa-solid fa-angle-down text-sm"></i>
-          </li>
-          <li
-            class="cursor-pointer hover:text-[#fab758] flex items-center justify-between"
-          >
-            Blocks
-            <i class="fa-solid fa-angle-down text-sm"></i>
-          </li>
-          <li
-            class="cursor-pointer hover:text-[#fab758] flex items-center justify-between"
-          >
-            Documentation
-            <i class="fa-solid fa-angle-down text-sm"></i>
-          </li>
-        </ul>
-      </div>
-      <!-- Navbar end here -->
+                <li class="cursor-pointer">
+                    <!-- Parent Dropdown (Pages) -->
+                    <div class="flex items-center justify-between" onclick="togglePagesDropdown('pagesDropdown')">
+                        Pages
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </div>
+                    <ul id="pagesDropdown" class="hidden mt-2 ml-3 text-[16px] space-y-2 p-3">
+                        <!-- Nested Dropdown (Services) -->
+                        <li class="cursor-pointer">
+                            <div class="flex items-center justify-between"
+                                onclick="toggleServiceDropdown('servicesDropdown1')">
+                                Services
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <ul id="servicesDropdown1" class="hidden mt-2 ml-5 text-[16px] space-y-2">
+                                <li>Services I</li>
+                                <li>Services II</li>
+                            </ul>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a href="#" class="flex items-center justify-between" onclick="toggleAboutDropdown('aboutMobileDropdown')">
+                                About
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="aboutMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-2">
+                                <li>About I</li>
+                                <li>About II</li>
+                            </ul>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a href="#" class="flex items-center justify-between" onclick="toggleShopDropdown('shopMobileDropdown')">
+                                Shop
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="shopMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-2">
+                                <li>Shop I</li>
+                                <li>Shop II</li>
+                                <li>Product Page</li>
+                                <li>Shopping Cart</li>
+                                <li>Check Out</li>
+                            </ul>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a href="#" class="flex items-center justify-between" onclick="toggleContactDropdown('contactMobileDropdown')">
+                                Contact
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="contactMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-2">
+                                <li>Contact I</li>
+                                <li>Contact II</li>
+                                <li>Contact III</li>
+                            </ul>
+                        </li>
+                        <li class="cursor-pointer">
+                            <a href="#" class="flex items-center justify-between" onclick="toggleCareerDropdown('careerMobileDropdown')">
+                                Career
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="careerMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-2">
+                                <li>Job Listing I</li>
+                                <li>Job Listing II</li>
+                                <li>Job Description</li>
+                            </ul>    
+                        </li>
+                        <li class="cursor-pointer">
+                            <a href="#" class="flex items-center justify-between" onclick="toggleUtilityDropdown('utilityMobileDropdown')">
+                                Utility
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="utilityMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-2">
+                                <li>404 Not Found</li>
+                                <li>Page Loader</li>
+                                <li>Sign In I</li>
+                                <li>Sign In II</li>
+                                <li>Sign Up I</li>
+                                <li>Sign Up II</li>
+                            </ul>  
+                        </li>
+                        <li class="cursor-pointer">Pricing</li>
+                        <li class="cursor-pointer">One Page</li>
+                    </ul>
+                </li>
+
+                <li class="cursor-pointer hover:text-[#fab758]">
+                    <a href="#" class=" flex items-center justify-between" onclick="toggleProjectDropdown('projectMobileDropdown')">
+                        Projects
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>    
+                        <div id="projectMobileDropdown" class="hidden mt-2 ml-5 text-[16px]">
+                            <ul class="space-y-3 text-[#fab758] mt-2">
+                                PROJECTS PAGES
+                                <li class="text-white mt-2">Projects I</li>
+                                <li class="text-white">Projects II</li>
+                                <li class="text-white">Projects III</li>
+                                <li class="text-white">Projects IV</li>
+                            </ul>
+                            <ul class="space-y-3 mt-3 text-[#fab758]">
+                                SINGLE PROJECTS
+                                <li class="text-white mt-2">Single Pojects I</li>
+                                <li class="text-white">Single Pojects II</li>
+                                <li class="text-white">Single Pojects III</li>
+                                <li class="text-white">Single Pojects IV</li>
+                            </ul>
+                        </div>
+                </li>
+
+                <li class="cursor-pointer">
+                    <a href="#" class="flex items-center justify-between" onclick="toggleBlogDropdown('blogMobileDropdown')">
+                        Blog
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>
+                    <ul id="blogMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-3">
+                        <li>Blog without Sidebar</li>
+                        <li>Blog with Sidebar</li>
+                        <li>Blog with Left Sidebar</li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center hover:text-[#fab758]" onclick="toggleBlogPostDropdown('blogPostMobileDropdown')">
+                                Blog Posts
+                                <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul id="blogPostMobileDropdown" class="hidden mt-2 ml-5 text-[16px] space-y-3">
+                                <li>Post without Sidebar</li>
+                                <li>Post with Sidebar</li>
+                                <li>Post with Left Sidebar</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Blocks
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+                <li class="cursor-pointer hover:text-[#fab758] flex items-center justify-between">
+                    Documentation
+                    <i class="fa-solid fa-angle-down text-sm"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- Navbar end here -->
+
+        <!-- Hero Section Start here -->
+         <div>
+            
+         </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

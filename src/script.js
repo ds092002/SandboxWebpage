@@ -75,6 +75,44 @@ function toggleServiceDropdown(id) {
   dropdown.classList.toggle("hidden"); // Toggles visibility
 }
 
+function toggleAboutDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+
+function toggleShopDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+function toggleContactDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+
+function toggleCareerDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+
+function toggleUtilityDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+
+function toggleProjectDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+
+function toggleBlogDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
+
+function toggleBlogPostDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.classList.toggle('hidden'); // Toggles visibility
+}
 // function handleMobileMenu() {
 //     const navdialog = document.getElementById('nav-dialog');
 //     if (navdialog.classList.contains('-translate-x-full')) {
