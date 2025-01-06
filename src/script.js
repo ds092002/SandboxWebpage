@@ -113,6 +113,45 @@ function toggleBlogPostDropdown(id){
   const dropdown = document.getElementById(id);
   dropdown.classList.toggle('hidden'); // Toggles visibility
 }
+
+// document.querySelectorAll('[id^="question"]').forEach(function(button, index) {
+//   button.addEventListener('click', function() {
+//       var answer = document.getElementById('answer' + (index + 1));
+//       var arrow = document.getElementById('arrow' + (index + 1));
+
+//       if (answer.style.display === 'none' || answer.style.display === '') {
+//           answer.style.display = 'block';
+//           arrow.style.transform = 'rotate(0deg)';
+//       } else {
+//           answer.style.display = 'none';
+//           arrow.style.transform = 'rotate(-180deg)';
+//       }
+//   });
+// });
+
+let activeAccordion = null;
+
+  function toggleAccordion(id) {
+    // Close the currently active accordion (if any)
+    if (activeAccordion && activeAccordion !== id) {
+      document.getElementById(`content-${activeAccordion}`).classList.add('hidden');
+      document.getElementById(`icon-${activeAccordion}`).classList.remove('rotate-180');
+    }
+
+    // Toggle the clicked accordion
+    const content = document.getElementById(`content-${id}`);
+    const icon = document.getElementById(`icon-${id}`);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+      activeAccordion = id; // Update the active accordion
+    } else {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+      activeAccordion = null; // No accordion is active
+    }
+  }
+
 // function handleMobileMenu() {
 //     const navdialog = document.getElementById('nav-dialog');
 //     if (navdialog.classList.contains('-translate-x-full')) {
