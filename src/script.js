@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+          navbar.classList.add("scrolled");
+      } else {
+          navbar.classList.remove("scrolled");
+      }
+  });
+});
+
+
 function handleMenu() {
   const navdialog = document.getElementById("nav-dialog");
   navdialog.classList.toggle("hidden");
@@ -114,43 +127,42 @@ function toggleBlogPostDropdown(id){
   dropdown.classList.toggle('hidden'); // Toggles visibility
 }
 
-// document.querySelectorAll('[id^="question"]').forEach(function(button, index) {
-//   button.addEventListener('click', function() {
-//       var answer = document.getElementById('answer' + (index + 1));
-//       var arrow = document.getElementById('arrow' + (index + 1));
+function toggleAccordion(id) {
+  // Get all accordion content elements and icons
+  const allContents = document.querySelectorAll("[id^='content-']");
+  const allIcons = document.querySelectorAll("[id^='icon-']");
+  const allLabels = document.querySelectorAll("[id^='label-']");
 
-//       if (answer.style.display === 'none' || answer.style.display === '') {
-//           answer.style.display = 'block';
-//           arrow.style.transform = 'rotate(0deg)';
-//       } else {
-//           answer.style.display = 'none';
-//           arrow.style.transform = 'rotate(-180deg)';
-//       }
-//   });
-// });
+  // Loop through all content elements to close them
+  allContents.forEach((content, index) => {
+    const currentId = index + 1;
+    const icon = document.getElementById(`icon-${currentId}`);
+    const label = document.getElementById(`label-${currentId}`);
 
-let activeAccordion = null;
+    if (currentId === id) {
+      // Toggle the selected accordion
+      content.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
 
-  function toggleAccordion(id) {
-    // Close the currently active accordion (if any)
-    if (activeAccordion && activeAccordion !== id) {
-      document.getElementById(`content-${activeAccordion}`).classList.add('hidden');
-      document.getElementById(`icon-${activeAccordion}`).classList.remove('rotate-180');
-    }
-
-    // Toggle the clicked accordion
-    const content = document.getElementById(`content-${id}`);
-    const icon = document.getElementById(`icon-${id}`);
-    if (content.classList.contains('hidden')) {
-      content.classList.remove('hidden');
-      icon.classList.add('rotate-180');
-      activeAccordion = id; // Update the active accordion
+      // Adjust the label color for the selected accordion
+      if (content.classList.contains("hidden")) {
+        label.classList.remove("text-[#fab758]");
+        label.classList.add("text-gray-800");
+      } else {
+        label.classList.add("text-[#fab758]");
+        label.classList.remove("text-gray-800");
+      }
     } else {
-      content.classList.add('hidden');
-      icon.classList.remove('rotate-180');
-      activeAccordion = null; // No accordion is active
+      // Close other accordions
+      content.classList.add("hidden");
+      icon.classList.remove("rotate-180");
+      label.classList.remove("text-[#fab758]");
+      label.classList.add("text-gray-800");
     }
-  }
+  });
+}
+
+
 
 // function handleMobileMenu() {
 //     const navdialog = document.getElementById('nav-dialog');

@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sandbox</title>
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-[#fff8ee] font-mulis">
-    <div>
+    <div class="">
         <!-- Navbar start here -->
-        <nav class="h-16 flex justify-between px-4 md:px-16 items-center container mx-auto" id="navbar">
+        <nav class="fixed top-0 left-0 right-0 h-20 flex justify-between px-4 md:px-16 items-center mx-auto bg-[#fff8ee] z-50 " id="navbar">
             <!-- Logo -->
             <a href="" id="logo">
                 <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover" />
             </a>
             <!-- Dekstop Menu -->
-            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8" id="nav-menu">
-                <li class="cursor-pointer flex items-center gap-1 py-4">
+            <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8 z-50" id="nav-menu">
+                <li class="cursor-pointer flex items-center gap-1 py-1">
                     Demos
                     <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
                 </li>
-                <li class="relative group py-4" id="dropDownbutton">
+                <li class="relative group py-1" id="dropDownbutton">
                     <a href="#" class="cursor-pointer flex items-center gap-1" onclick="toggleDropdown()">
                         Pages
                         <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
@@ -129,7 +130,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="relative group py-4" id="projectDropdown">
+                <li class="relative group py-1" id="projectDropdown">
                     <a href="#" class="cursor-pointer flex items-center gap-1" onclick="projectDropdown()">
                         Projects
                         <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
@@ -165,7 +166,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="relative group flex items-center gap-1 py-4" id="blogDropdown">
+                <li class="relative group flex items-center gap-1 py-1" id="blogDropdown">
                     <a href="#" class="cursor-pointer flex items-center" onclick="">Blog
                       <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
                         <ul
@@ -187,7 +188,7 @@
                     Blocks
                     <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
                 </li>
-                <li class="relative group py-4" id="documentationDropdown">
+                <li class="relative group py-1 flex items-center" id="documentationDropdown">
                     <a href="#" class="cursor-pointer flex items-center gap-1">
                         Documentation
                         <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
@@ -286,7 +287,7 @@
         </nav>
         <!-- MOBILE MENU -->
         <div
-        class="fixed lg:hidden  bg-[#1e2228] inset-0 max-w-[calc(100%-10%)] p-7 hidden" 
+        class="fixed top-0 z-50 lg:hidden  bg-[#1e2228] inset-0 max-w-[calc(100%-10%)] p-7 hidden" 
         id="nav-dialog">
         <div class="text-white flex justify-between mt-2" id="nav-bar">
           <h2 class="text-3xl font-bold">Sandbox</h2>
@@ -505,7 +506,7 @@
                 <div class="container mx-auto mt-10 px-3 lg:px-20">
                     <div class="text-center">
                         <p class="text-[#AAB0BC] font-semibold text-[16px] mb-4">WHAT WE DO?</p>
-                        <h1 class=" text-3xl leading-none text-[#343f52] font-bold md:text-4xl lg:text-4xl lg:leading-tight mb-5">The service we offer is specifically designed to meet your needs.</h1>
+                        <h1 class="max-w-xl mx-auto text-3xl leading-none text-[#343f52] font-bold md:text-4xl lg:text-4xl lg:leading-tight mb-5">The service we offer is specifically designed to meet your needs.</h1>
                     </div>
                     <!-- Card Section -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-7 mt-12">
@@ -572,7 +573,7 @@
 
          <!-- Analyze Now Section Start -->
           <section class="py-5 pt-10 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[72px]">
-            <div class="container flex flex-wrap items-center justify-center mx-auto mt-10 md:flex-row lg:px-0 px-4">
+            <div class="container flex flex-wrap items-start justify-start mx-auto mt-10 md:flex-row lg:px-0 px-4">
                 <div class="lg:w-1/2 order-1 lg:order-2 mt-10 mb-10 lg:mt-0 lg:mb-0 lg:px-0">
                     <img src="assets (6)/asset 53.png" alt="">
                 </div>
@@ -590,7 +591,7 @@
          <!-- Analyze Now Section End -->
 
          <!-- Our Strategy Section Start Here -->
-          <section class="py-5 pt-10 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[72px]">
+          <section class="py-5 pt-10 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[72px] bg-white">
             <div class="container flex flex-wrap items-center justify-center mx-auto mt-10 md:flex-row lg:px-0 px-4">
                 <div class="lg:w-1/2 order-1 lg:order-2 mt-10 mb-10  lg:mt-0 lg:mb-0 lg:px-0 space-y-6">
                     <div class="p-[30px] lg:max-w-md xl:max-w-lg flex items-center rounded-xl shadow-xl bg-white space-x-4">
@@ -630,113 +631,315 @@
          <!-- Our Strategy Section End Here -->
 
          <!-- Why Choose Us Section Start Here -->
-          <section class="py-5 pt-10 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[72px]">
-            <div class="container flex flex-wrap items-center justify-center mx-auto mt-5 md:flex-row lg:px-0 px-4">
+          <section class="py-5 pt-5 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[36px] bg-white">
+            <div class="container flex flex-wrap items-start justify-start mx-auto mt-5 md:flex-row lg:px-0 px-4 ">
                 <div class="lg:w-1/2">
                     <img src="assets (6)/asset 54.png" alt="">
                 </div>
-                <div class="lg:w-1/2">
-                    <p class="uppercase">why Choose us?</p>
-                    <h2></h2>
-                    <div class="" id="accordion">
+                <div class="lg:w-1/2 mt-10 mb-10 lg:mt-0 lg:mb-0 space-y-5 md:px-14">
+                    <p class="uppercase text-[#AAB0BC] font-semibold text-[16px] mb-4 text-left">why Choose us?</p>
+                    <h2 class="max-w-lg text-3xl leading-none text-[#343f52] font-bold text-left md:text-4xl lg:text-4xl lg:leading-tight">We bring solutions to make life easier for our clients.</h2>
+                    <div class="max-w-lg leading-none lg:leading-tight md:space-y-4" id="accordion">
                         <!-- Accordion Item 1 -->
-                        <div class="">
-                          <button
-                            class="flex justify-between items-center p-4 md:p-6 focus:outline-none"
-                            onclick="toggleAccordion(1)"
-                          >
-                            <span class="font-medium text-lg md:text-xl">Professional Design</span>
-                            <svg
-                              id="icon-1"
-                              class="w-6 h-6 transform transition-transform"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
+                        <div>
+                            <button
+                              class="flex items-center gap-2 p-2 focus:outline-none"
+                              onclick="toggleAccordion(1)"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          </button>
-                          <div
-                            id="content-1"
-                            class="hidden p-4 md:p-6 text-gray-600 text-sm md:text-base"
-                          >
-                            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. 
-                            Curabitur blandit tempus porttitor.
+                              <svg
+                                id="icon-1"
+                                class="w-4 h-4 transform transition-transform text-[#fab758] font-semibold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                              <span
+                                id="label-1"
+                                class="font-medium text-[17px] text-[#343f52]"
+                              >
+                                Professional Design
+                              </span>
+                            </button>
+                            <div
+                              id="content-1"
+                              class="hidden leading-tight pl-8 text-gray-600 text-[16px]"
+                            >
+                              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                              fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                              fermentum. Praesent commodo cursus magna, vel.
+                            </div>
                           </div>
-                        </div>
+
+                          <!-- Accordion Item 2 -->
+                        <div>
+                            <button
+                              class="flex items-center gap-2 p-2 focus:outline-none"
+                              onclick="toggleAccordion(2)"
+                            >
+                              <svg
+                                id="icon-2"
+                                class="w-4 h-4 transform transition-transform text-[#fab758] font-semibold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                              <span
+                                id="label-2"
+                                class="font-medium text-[17px] text-[#343f52]"
+                              >
+                                Top-Notch Support
+                              </span>
+                            </button>
+                            <div
+                              id="content-2"
+                              class="hidden leading-tight pl-8 text-gray-600 text-[16px]"
+                            >
+                              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                              fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                              fermentum. Praesent commodo cursus magna, vel.
+                            </div>
+                          </div>
+
+                          <!-- Accordion Item 3 -->
+                        <div>
+                            <button
+                              class="flex items-center gap-2 p-2 focus:outline-none"
+                              onclick="toggleAccordion(3)"
+                            >
+                              <svg
+                                id="icon-3"
+                                class="w-4 h-4 transform transition-transform text-[#fab758] font-semibold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                              <span
+                                id="label-3"
+                                class="font-medium text-[17px] text-[#343f52]"
+                              >
+                                Header and Slider Options
+                              </span>
+                            </button>
+                            <div
+                              id="content-3"
+                              class="hidden leading-tight pl-8 text-gray-600 text-[16px]"
+                            >
+                              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                              fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                              fermentum. Praesent commodo cursus magna, vel.
+                            </div>
+                          </div>
+                          
                     
-                        <!-- Accordion Item 2 -->
-                        <div class="">
-                          <button
-                            class="flex justify-between items-center p-4 md:p-6 focus:outline-none"
-                            onclick="toggleAccordion(2)"
-                          >
-                            <span class="font-medium text-lg md:text-xl">Top-Notch Support</span>
-                            <svg
-                              id="icon-2"
-                              class="w-6 h-6 transform transition-transform"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          </button>
-                          <div
-                            id="content-2"
-                            class="hidden p-4 md:p-6 text-gray-600 text-sm md:text-base"
-                          >
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                          </div>
-                        </div>
-                    
-                        <!-- Accordion Item 3 -->
-                        <div class="">
-                          <button
-                            class=" flex justify-between items-center p-4 md:p-6 focus:outline-none"
-                            onclick="toggleAccordion(3)"
-                          >
-                            <span class="font-medium text-lg md:text-xl">Header and Slider Options</span>
-                            <svg
-                              id="icon-3"
-                              class="w-6 h-6 transform transition-transform"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          </button>
-                          <div
-                            id="content-3"
-                            class="hidden p-4 md:p-6 text-gray-600 text-sm md:text-base"
-                          >
-                            Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-                          </div>
-                        </div>
                       </div>
                 </div>
             </div>
           </section>
          <!-- Why Choose Us Section End Here -->
+
+         <!-- Our Team Section Start Here -->
+          <section class="py-5 pt-5 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[36px]">
+            <div class="container mx-auto mt-10 px-3 lg:px-20">
+                <div class="text-center">
+                    <p class="uppercase text-[#AAB0BC] font-semibold text-[16px] mb-4">our Team</p>
+                    <h1 class="max-w-xl text-center mx-auto text-3xl leading-none text-[#343f52] font-bold md:text-4xl lg:text-4xl lg:leading-tight mb-5">Think unique and be innovative. Make a difference with Sandbox.</h1>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-7 mt-12">
+                    <div class="p-[35px] space-y-3 rounded-xl shadow-xl bg-white text-left">
+                        <div class="">
+                            <img src="assets (6)/asset 55.jpeg" alt="" class="size-24 rounded-full">
+                        </div>
+                        <p class="text-[#343f52] text-[20px] font-semibold">Coriss Ambady</p>
+                        <p class="text-[#AAB0BC] text-[14px] uppercase font-semibold">Financial Analyst</p>
+                        <p class="text-[#60697B] text-[17px] font-semibold">Fermentum massa justo sit amet risus morbi leo.</p>
+                        <div class="flex items-start justify-start gap-4 pt-3 pb-2 text-lg">
+                            <i class="fa-brands fa-twitter text-[#1DA1F2]"></i>
+                            <i class="fa-brands fa-facebook-f text-[#4267B2]"></i>
+                            <i class="fa-brands fa-chrome text-pink-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-[35px] space-y-3 rounded-xl shadow-xl bg-white text-left">
+                        <div class="">
+                            <img src="assets (6)/asset 56.jpeg" alt="" class="size-24 rounded-full">
+                        </div>
+                        <p class="text-[#343f52] text-[20px] font-semibold">Cory Zamora</p>
+                        <p class="text-[#AAB0BC] text-[14px] uppercase font-semibold">Marketing Specialist</p>
+                        <p class="text-[#60697B] text-[17px] font-semibold">Fermentum massa justo sit amet risus morbi leo.</p>
+                        <div class="flex items-start justify-start gap-4 pt-3 pb-2 text-lg">
+                            <i class="fa-brands fa-twitter text-[#1DA1F2]"></i>
+                            <i class="fa-brands fa-facebook-f text-[#4267B2]"></i>
+                            <i class="fa-brands fa-chrome text-pink-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-[35px] space-y-3 rounded-xl shadow-xl bg-white text-left">
+                        <div class="">
+                            <img src="assets (6)/asset 57.jpeg" alt="" class="size-24 rounded-full">
+                        </div>
+                        <p class="text-[#343f52] text-[20px] font-semibold">Nikolas Brooten</p>
+                        <p class="text-[#AAB0BC] text-[14px] uppercase font-semibold">Sales Manager</p>
+                        <p class="text-[#60697B] text-[17px] font-semibold">Fermentum massa justo sit amet risus morbi leo.</p>
+                        <div class="flex items-start justify-start gap-4 pt-3 pb-2 text-lg">
+                            <i class="fa-brands fa-twitter text-[#1DA1F2]"></i>
+                            <i class="fa-brands fa-facebook-f text-[#4267B2]"></i>
+                            <i class="fa-brands fa-chrome text-pink-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-[35px] space-y-3 rounded-xl shadow-xl bg-white text-left">
+                        <div class="">
+                            <img src="assets (6)/asset 58.jpeg" alt="" class="size-24 rounded-full">
+                        </div>
+                        <p class="text-[#343f52] text-[20px] font-semibold">Jackie Sanders</p>
+                        <p class="text-[#AAB0BC] text-[14px] uppercase font-semibold">Investment Planner</p>
+                        <p class="text-[#60697B] text-[17px] font-semibold">Fermentum massa justo sit amet risus morbi leo.</p>
+                        <div class="flex items-start justify-start gap-4 pt-3 pb-2 text-lg">
+                            <i class="fa-brands fa-twitter text-[#1DA1F2]"></i>
+                            <i class="fa-brands fa-facebook-f text-[#4267B2]"></i>
+                            <i class="fa-brands fa-chrome text-pink-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+         <!-- Our Team Section End Here -->
+
+         <!-- Our Solution Start Here -->
+          <section class="py-5 pt-5 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[36px]">
+            <div class="container flex flex-wrap items-start justify-start mx-auto mt-10 md:flex-row lg:px-0 px-4">
+                <div class="mt-10 mb-10 lg:mt-5 lg:mb-0 lg:w-1/2 space-y-7 md:px-14 order-2 lg:order-1">
+                    <p class="uppercase text-[#AAB0BC] font-semibold text-[16px] mb-4 text-left">our solutions</p>
+                    <h2 class="max-w-xl text-3xl leading-none text-[#343f52] font-bold text-left md:text-4xl lg:text-4xl lg:leading-tight mb-5">We make your spending stress-free for you to have the perfect control.</h2>
+                    <p class="max-w-xl text-left text-[#60697b] text-[17px] lg:max-w-md">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-md text-left">
+                        <div class="flex items-start gap-3 order-1">
+                          <div class="text-[#fab758]">
+                            <i class="fa-regular fa-circle-check"></i>
+                          </div>
+                          <p class="text-gray-700">
+                            Aenean quam ornare. Curabitur blandit.
+                          </p>
+                        </div>
+                        <div class="flex items-start gap-3 order-2">
+                          <div class="text-[#fab758]">
+                            <i class="fa-regular fa-circle-check"></i>
+                          </div>
+                          <p class="text-gray-700">
+                            Etiam porta euismod malesuada mollis.
+                          </p>
+                        </div>
+                        <div class="flex items-start gap-3 order-3">
+                          <div class="text-[#fab758]">
+                            <i class="fa-regular fa-circle-check"></i>
+                          </div>
+                          <p class="text-gray-700">
+                            Nullam quis risus eget urna mollis ornare.
+                          </p>
+                        </div>
+                        <div class="flex items-start gap-3 order-4">
+                          <div class="text-[#fab758]">
+                            <i class="fa-regular fa-circle-check"></i>
+                          </div>
+                          <p class="text-gray-700">
+                            Vivamus sagittis lacus vel augue rutrum.
+                          </p>
+                        </div>
+                      </div>
+                      
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2 mt-10 mb-10 lg:mt-0 lg:mb-0 lg:px-0">
+                    <img src="assets (6)/asset 59.png" alt="">
+                </div>
+            </div>
+          </section>
+         <!-- Our Solution End Here -->
+
+         <!-- Our Community Section Start Here -->
+          <section class="py-5 pt-5 lg:pt-[72px] xl:pt-[72px] pb-8 md:pt-[36px]">
+            <div class="container flex flex-wrap items-start justify-start mx-auto mt-10 md:flex-row lg:px-0 px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div >
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+          </section>
+          <section class="bg-orange-50 py-16 px-6">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
+              <!-- Testimonials Section -->
+              <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white shadow-lg p-6 rounded-lg">
+                  <p class="text-gray-600 text-lg italic">“Cum sociis natoque penatibus et magnis dis parturient montes.”</p>
+                  <h3 class="mt-4 text-lg font-bold text-gray-800">Coriss Ambady</h3>
+                  <p class="text-gray-500">Financial Analyst</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white shadow-lg p-6 rounded-lg">
+                  <p class="text-gray-600 text-lg italic">“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod.”</p>
+                  <h3 class="mt-4 text-lg font-bold text-gray-800">Cory Zamora</h3>
+                  <p class="text-gray-500">Marketing Specialist</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white shadow-lg p-6 rounded-lg">
+                  <p class="text-gray-600 text-lg italic">“Donec id elit non porta gravida at eget metus. Duis mollis est luctus commodo nisi erat.”</p>
+                  <h3 class="mt-4 text-lg font-bold text-gray-800">Barclay Widerski</h3>
+                  <p class="text-gray-500">Sales Specialist</p>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="bg-white shadow-lg p-6 rounded-lg">
+                  <p class="text-gray-600 text-lg italic">“Nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo pellentesque.”</p>
+                  <h3 class="mt-4 text-lg font-bold text-gray-800">Jackie Sanders</h3>
+                  <p class="text-gray-500">Investment Planner</p>
+                </div>
+              </div>
+          
+              <!-- Text Section -->
+              <div class="flex flex-col justify-center">
+                <h4 class="text-orange-400 uppercase font-semibold tracking-wider">Our Community</h4>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight mt-4">
+                  Don't take our word for it.<br />
+                  See what customers are saying about us.
+                </h2>
+                <p class="text-gray-600 text-lg mt-6">
+                  Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue.
+                </p>
+                <p class="text-gray-600 text-lg mt-4">
+                  Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod.
+                </p>
+                <a href="#" class="mt-6 inline-block bg-orange-400 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-orange-500">
+                  All Testimonials
+                </a>
+              </div>
+            </div>
+          </section>
+          
+         <!-- Our Community Section End Here -->
     </div>
     <script src="script.js"></script>
 </body>

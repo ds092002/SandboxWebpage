@@ -1,0 +1,26 @@
+/* Initial navbar background color */
+#navbar {
+    background-color: #fff8ee;
+    box-shadow: none;
+}
+
+/* Navbar background color when scrolled */
+#navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make sure the navbar spans the full width */
+/* body {
+    margin: 0;
+    padding: 0;
+} */
+ [id^='content-'] {
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+[id^='content-']:not(.hidden) {
+  max-height: 100px; /* Adjust based on your content size */
+}
