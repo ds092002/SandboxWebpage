@@ -28,14 +28,14 @@ function toggleDropdown() {
 //     serviceDropdown.classList.toggle('hidden');
 // }
 
-function serviceMenuDropdown(show) {
-  const serviceDropdown = document.querySelector("#servicesDropdown #service");
-  if (show) {
-    serviceDropdown.classList.remove("hidden");
-  } else {
-    serviceDropdown.classList.add("hidden");
-  }
-}
+// function serviceMenuDropdown(show) {
+//   const serviceDropdown = document.querySelector("#servicesDropdown #service");
+//   if (show) {
+//     serviceDropdown.classList.remove("hidden");
+//   } else {
+//     serviceDropdown.classList.add("hidden");
+//   }
+// }
 
 function aboutMenuDropdown(event) {
   event.stopPropagation();
@@ -161,6 +161,26 @@ function toggleAccordion(id) {
     }
   });
 }
+
+// Select the toggle checkbox and prices
+const toggle = document.getElementById("toggle-pricing");
+const prices = document.querySelectorAll(".price");
+const durations = document.querySelectorAll(".duration");
+
+// Event listener for toggling prices
+toggle.addEventListener("change", () => {
+  const isYearly = toggle.checked;
+
+  prices.forEach((price) => {
+    const newPrice = isYearly ? price.dataset.yearly : price.dataset.monthly;
+    price.textContent = `$${newPrice}`;
+  });
+
+  durations.forEach((duration) => {
+    duration.textContent = isYearly ? "/year" : "/month";
+  });
+});
+
 
 
 
