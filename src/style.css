@@ -24,3 +24,32 @@
 [id^='content-']:not(.hidden) {
   max-height: 100px; /* Adjust based on your content size */
 }
+
+.underline-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: #fab758; /* Color of the underline */
+  transition: width 0.3s ease-in-out; /* Smooth transition for expanding and contracting underline */
+}
+
+.underline-effect:hover::after {
+  width: 100%; /* Underline expands to full width on hover */
+}
+
+input[type="checkbox"]:checked + div > div {
+  transform: translateX(100%);
+}
+
+input[type="checkbox"]:checked + div > div > div {
+  transform: translateX(100%);
+}
+
