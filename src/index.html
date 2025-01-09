@@ -15,7 +15,7 @@
 <body class="bg-[#fff8ee] font-mulis">
     <div class="">
         <!-- Navbar start here -->
-        <nav class="fixed top-0 left-0 right-0 h-20 flex justify-between px-4 md:px-16 items-center mx-auto bg-[#fff8ee] z-50 " id="navbar">
+        <nav class="w-full fixed top-0 left-0 right-0 h-20 flex justify-between px-4 md:px-16 items-center mx-auto bg-[#fff8ee] z-50 " id="navbar">
             <!-- Logo -->
             <a href="" id="logo">
                 <img src="./assets (6)/asset 0.png" alt="Sandbox" class="max-h-7 object-cover" />
@@ -24,112 +24,116 @@
             <ul class="hidden lg:flex font-semibold text-[#343f52] text-[17px] space-x-8 z-50" id="nav-menu">
                 <li class="cursor-pointer flex items-center gap-1 py-6">
                     Demos
-                    <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
+                    <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>   
                 </li>
-                <li class="relative group py-6" id="dropDownbutton">
-                    <a href="#" class="cursor-pointer flex items-center gap-1" onclick="toggleDropdown()">
-                        Pages
-                        <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
-                        <div class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[65px] min-w-[250px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover:block"
-                            id="dropdown">
-                            <div class="relative" id="servicesDropdown" onmouseenter="serviceMenuDropdown(true)"
-                                onmouseleave="serviceMenuDropdown(false)">
-                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                                    onclick="serviceMenuDropdown(event)">
-                                    Services
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-56 top-[1px] w-[200px] shadow-md space-y-2 px-20"
-                                        id="service">
-                                        <div class="text-[16px]">Services I</div>
-                                        <div class="text-[16px]">Services II</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="relative" id="aboutDropdown">
-                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                                    onclick="aboutMenuDropdown(event)">
-                                    About
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2 hidden"
-                                        id="about">
-                                        <div class="text-sm">About I</div>
-                                        <div class="text-sm">About II</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="relative" id="shopDropdown">
-                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                                    onclick="shopDropdown(event)">
-                                    Shop
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                                        id="shop">
-                                        <div class="text-sm">Shop I</div>
-                                        <div class="text-sm">Shop II</div>
-                                        <div class="text-sm">Product Page</div>
-                                        <div class="text-sm">Shopping Cart</div>
-                                        <div class="text-sm">Checkout</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="relative" id="contactDropdown">
-                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                                    onclick="contactDropdown(event)">
-                                    Contact
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                                <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                                    id="contact">
-                                    <div class="text-sm">Contact I</div>
-                                    <div class="text-sm">Contact II</div>
-                                    <div class="text-sm">Contact III</div>
-                                </div>
-                            </div>
-
-                            <div class="relative" id="careerDropdown">
-                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                                    onclick="careerDropdown(event)">
-                                    Career
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                                <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                                    id="career">
-                                    <div class="text-sm">Job Listing I</div>
-                                    <div class="text-sm">Job Listing II</div>
-                                    <div class="text-sm">Job Description</div>
-                                </div>
-                            </div>
-
-                            <div class="relative" id="utilityDropdown">
-                                <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base"
-                                    onclick="utilityDropdown(event)">
-                                    Utility
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    <div class="rounded-lg border-1 border-slate-300 bg-white p-8 absolute left-44 top-[1px] w-[200px] shadow-md space-y-2"
-                                        id="utility">
-                                        <div>404 Not Found</div>
-                                        <div>Page Loader</div>
-                                        <div>Sign In I</div>
-                                        <div>Sign In II</div>
-                                        <div>Sign Out I</div>
-                                        <div>Sign Out II</div>
-                                        <div>Terms</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cursor-pointer hover:text-[#fab758] text-base">
-                                Pricing
-                            </div>
-                            <div class="cursor-pointer hover:text-[#fab758] text-base">
-                                One Page
-                            </div>
+                <li class="relative group group/edit py-6" id="dropDownbutton">
+                    <a href="#" class="cursor-pointer flex items-center gap-1">
+                      Pages
+                      <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
+                  
+                      <!-- Main Dropdown -->
+                      <div
+                        class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[65px] min-w-[250px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover/edit:block"
+                        id="dropdown">
+                        
+                        <!-- Services Dropdown -->
+                        <div class="relative group/item1">
+                          <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">
+                            Services
+                            <i class="fa-solid fa-angle-right"></i>
+                          </div>
+                          <div
+                            class="rounded-lg border border-slate-300 bg-white p-8 absolute left-56 top-0 w-[200px] shadow-md space-y-2 px-6 opacity-0 hidden group-hover:opacity-100 group-hover/item1:block transition-opacity duration-200">
+                            <div class="text-[16px]">Services I</div>
+                            <div class="text-[16px]">Services II</div>
+                          </div>
                         </div>
+                  
+                        <!-- About Dropdown -->
+                        <div class="relative group/item2">
+                          <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">
+                            About
+                            <i class="fa-solid fa-angle-right"></i>
+                          </div>
+                          <div
+                            class="rounded-lg border border-slate-300 bg-white p-8 absolute left-56 top-0 w-[200px] shadow-md space-y-2 px-6 opacity-0 hidden group-hover:opacity-100 group-hover/item2:block transition-opacity duration-200">
+                            <div class="text-sm">About I</div>
+                            <div class="text-sm">About II</div>
+                          </div>
+                        </div>
+                  
+                        <!-- Shop Dropdown -->
+                        <div class="relative group/item4">
+                          <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">
+                            Shop
+                            <i class="fa-solid fa-angle-right"></i>
+                          </div>
+                          <div
+                            class="rounded-lg border border-slate-300 bg-white p-8 absolute left-56 top-0 w-[200px] shadow-md space-y-2 px-6 opacity-0 hidden group-hover:opacity-100 group-hover/item4:block transition-opacity duration-200">
+                            <div class="text-sm">Shop I</div>
+                            <div class="text-sm">Shop II</div>
+                            <div class="text-sm">Product Page</div>
+                            <div class="text-sm">Shopping Cart</div>
+                            <div class="text-sm">Checkout</div>
+                          </div>
+                        </div>
+                  
+                        <!-- Contact Dropdown -->
+                        <div class="relative group/item5">
+                          <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">
+                            Contact
+                            <i class="fa-solid fa-angle-right"></i>
+                          </div>
+                          <div
+                            class="rounded-lg border border-slate-300 bg-white p-8 absolute left-56 top-0 w-[200px] shadow-md space-y-2 px-6 opacity-0 hidden group-hover:opacity-100 group-hover/item5:block transition-opacity duration-200">
+                            <div class="text-sm">Contact I</div>
+                            <div class="text-sm">Contact II</div>
+                            <div class="text-sm">Contact III</div>
+                          </div>
+                        </div>
+                  
+                        <!-- Career Dropdown -->
+                        <div class="relative group/item6">
+                          <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">
+                            Career
+                            <i class="fa-solid fa-angle-right"></i>
+                          </div>
+                          <div
+                            class="rounded-lg border border-slate-300 bg-white p-8 absolute left-56 top-0 w-[200px] shadow-md space-y-2 px-6 opacity-0 hidden group-hover:opacity-100 group-hover/item6:block transition-opacity duration-200">
+                            <div class="text-sm">Job Listing I</div>
+                            <div class="text-sm">Job Listing II</div>
+                            <div class="text-sm">Job Description</div>
+                          </div>
+                        </div>
+                  
+                        <!-- Utility Dropdown -->
+                        <div class="relative group/item7">
+                          <div class="cursor-pointer hover:text-[#fab758] flex items-center justify-between text-base">
+                            Utility
+                            <i class="fa-solid fa-angle-right"></i>
+                          </div>
+                          <div
+                            class="rounded-lg border border-slate-300 bg-white p-8 absolute left-56 top-0 w-[200px] shadow-md space-y-2 px-6 opacity-0 hidden group-hover:opacity-100 group-hover/item7:block transition-opacity duration-200">
+                            <div>404 Not Found</div>
+                            <div>Page Loader</div>
+                            <div>Sign In I</div>
+                            <div>Sign In II</div>
+                            <div>Sign Out I</div>
+                            <div>Sign Out II</div>
+                            <div>Terms</div>
+                          </div>
+                        </div>
+                  
+                        <!-- Pricing -->
+                        <div class="cursor-pointer hover:text-[#fab758] text-base">Pricing</div>
+                  
+                        <!-- One Page -->
+                        <div class="cursor-pointer hover:text-[#fab758] text-base">One Page</div>
+                      </div>
                     </a>
-                </li>
+                  </li>
+                   
+                  
                 <li class="relative group py-6" id="projectDropdown">
                     <a href="#" class="cursor-pointer flex items-center gap-1" onclick="projectDropdown()">
                         Projects
@@ -167,7 +171,7 @@
                     </a>
                 </li>
                 <li class="relative group flex items-center gap-1 py-6" id="blogDropdown">
-                    <a href="#" class="cursor-pointer flex items-center" onclick="">Blog
+                    <a href="#" class="cursor-pointer flex items-center gap-1" onclick="">Blog
                       <i class="fa-solid fa-angle-down text-sm text-[#fab758]"></i>
                         <ul
                             class="origin-top-right -translate-x-1 rounded-lg border border-slate-300 bg-white p-7 absolute -left-7 top-[65px] min-w-[250px] shadow-md mt-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 hidden group-hover:block">
@@ -485,8 +489,8 @@
 
         <!-- Hero Section Start here -->
          <section id="hero" class="py-5 pt-10 xl:pt-[72px] pb-8 md:pt-[72px]">
-            <div class="container flex flex-wrap items-center justify-center mx-auto mt-10 md:flex-row lg:px-5"> 
-                <div class="lg:w-1/2">
+            <div class="container flex flex-wrap items-center justify-center mx-auto mt-10 md:flex-row lg:px-0 px-4"> 
+                <div class="lg:w-1/2 mt-10 mb-10 lg:mt-0 lg:mb-0 lg:px-0">
                     <img src="assets (6)/asset 52.png" alt="hero image" class="mr-auto">
                 </div>
                 <div class="mt-10 lg:mt-0 lg:mb-0 lg:w-1/2 space-y-7 md:px-14">
@@ -943,7 +947,7 @@
                           </span>
                         </label>
                       </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 max-w-4xl mx-auto">
                         <!-- Price Card 1 -->
                         <div class="p-[40px] bg-white shadow-2xl rounded-lg lg:mt-6">
                             <div class="flex flex-col justify-center items-center my-8">
@@ -1075,7 +1079,7 @@
 
           <!-- Footer Section Start Here -->
            <footer class="py-5 pt-10 lg:pt-[80px] xl:pt-[72px] pb-8 md:pt-[72px] bg-[#343f52]">
-            <div class="container flex flex-wrap mx-auto mt-5 lg:px-0 px-4">
+            <div class="container  mx-auto mt-5 lg:px-2 px-4">
                 <div class="flex justify-between items-center flex-wrap w-full">
                     <h2 class="max-w-xl text-3xl leading-none text-white font-bold text-left md:text-4xl lg:text-4xl lg:leading-tight mb-5">Join our community by using our services and grow your business.</h2>
                     <div class="">
@@ -1098,40 +1102,34 @@
                             <i class="fa-brands fa-youtube transition-transform transform hover:-translate-y-1"></i>
                         </div>
                     </div>
-                    <div class="text-white">
+                    <div class="text-white space-y-5">
                         <h4 class="text-[20px] font-bold">Get in Touch</h4>
-                        <address class="not-italic leading-[inherit] block mb-4 text-[18px]">
+                        <address class="not-italic leading-[inherit] block mb-4 text-[17px] text-[#CACACA]">
                             <span class="address lg:block sm:inline md:block">Moonshine St.</span>
                             <span class="address lg:block sm:inline md:block">14/05 Light City,</span>
                             <span class="address lg:block sm:inline md:block">London,</span>
                             <span class="address lg:block sm:inline md:block">United Kingdom</span>
                         </address>
-                        <p>info@email.com <br>
+                        <p class="text-[#CACACA] text-[17px]">info@email.com <br>
                             00 (123) 456 78 90
                         </p>
                     </div>
                     <div class="text-white space-y-6">
-                        <img src="assets (6)/asset 67.png" alt="">
-                        <p class="text-[18px] text-[#CACACA]">© 2024 Sandbox. <br>
-                             All rights reserved.</p>
-                        <div class="text-[#CACACA] space-x-3">
-                            <i class="fa-brands fa-twitter transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-facebook-f transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-chrome transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-instagram transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-youtube transition-transform transform hover:-translate-y-1"></i>
+                        <h4 class="text-[20px] font-bold">Learn More</h4>
+                        <div class="text-[#CACACA] text-[18px] space-y-2">
+                            <p>About Us</p>
+                            <p>Our Story</p>
+                            <p>Projects</p>
+                            <p>Terms of Use</p>
+                            <p>Privacy Policy</p>
                         </div>
                     </div>
                     <div class="text-white space-y-6">
-                        <img src="assets (6)/asset 67.png" alt="">
-                        <p class="text-[18px] text-[#CACACA]">© 2024 Sandbox. <br>
-                             All rights reserved.</p>
-                        <div class="text-[#CACACA] space-x-3">
-                            <i class="fa-brands fa-twitter transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-facebook-f transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-chrome transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-instagram transition-transform transform hover:-translate-y-1"></i>
-                            <i class="fa-brands fa-youtube transition-transform transform hover:-translate-y-1"></i>
+                        <h4 class="text-[20px] font-bold">Our Newsletter</h4>
+                        <p class="text-[18px] text-[#CACACA]">Subscribe to our newsletter to get our news & deals delivered to you.</p>
+                        <div class="flex border-[1px] rounded-lg overflow-hidden max-w-xl lg:max-w[190px]">
+                            <input placeholder="Enter Address" class=" bg-[#343f52] p-3 text-base text-white w-full border-r-0 focus:outline-none" name="email" type="email">
+                            <button class="bg-[#fab758] text-white p-3 w-[150px] cursor-pointer">Join</button>
                         </div>
                     </div>
                 </div>

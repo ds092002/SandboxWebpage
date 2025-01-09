@@ -628,10 +628,6 @@ video {
   left: 0px;
 }
 
-.left-44 {
-  left: 11rem;
-}
-
 .left-56 {
   left: 14rem;
 }
@@ -646,10 +642,6 @@ video {
 
 .top-5 {
   top: 1.25rem;
-}
-
-.top-\[1px\] {
-  top: 1px;
 }
 
 .top-\[65px\] {
@@ -905,8 +897,8 @@ video {
   max-width: 36rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .flex-shrink-0 {
@@ -1131,6 +1123,10 @@ video {
   border-width: 2px;
 }
 
+.border-\[1px\] {
+  border-width: 1px;
+}
+
 .border-r-0 {
   border-right-width: 0px;
 }
@@ -1211,11 +1207,6 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .px-3 {
@@ -1357,14 +1348,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-\[24px\] {
-  font-size: 24px;
-}
-
-.text-\[2px\] {
-  font-size: 2px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1393,28 +1376,16 @@ video {
   font-style: normal;
 }
 
+.leading-\[inherit\] {
+  line-height: inherit;
+}
+
 .leading-none {
   line-height: 1;
 }
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.leading-\[\] {
-  line-height: ;
-}
-
-.leading-\[in\] {
-  line-height: in;
-}
-
-.leading-\[inhe\] {
-  line-height: inhe;
-}
-
-.leading-\[inherit\] {
-  line-height: inherit;
 }
 
 .text-\[\#1DA1F2\] {
@@ -1455,6 +1426,11 @@ video {
 .text-\[\#AAB0BC\] {
   --tw-text-opacity: 1;
   color: rgb(170 176 188 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#CACACA\] {
+  --tw-text-opacity: 1;
+  color: rgb(202 202 202 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#E2626B\] {
@@ -1510,19 +1486,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\] {
-  color: ;
-}
-
-.text-\[\#\] {
-  color: #;
-}
-
-.text-\[\#CACACA\] {
-  --tw-text-opacity: 1;
-  color: rgb(202 202 202 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0 {
@@ -1718,6 +1681,42 @@ video {
   display: block;
 }
 
+.group\/edit:hover .group-hover\/edit\:block {
+  display: block;
+}
+
+.group\/item:hover .group-hover\/item\:block {
+  display: block;
+}
+
+.group\/item1:hover .group-hover\/item1\:block {
+  display: block;
+}
+
+.group\/item3:hover .group-hover\/item3\:block {
+  display: block;
+}
+
+.group\/item4:hover .group-hover\/item4\:block {
+  display: block;
+}
+
+.group\/item5:hover .group-hover\/item5\:block {
+  display: block;
+}
+
+.group\/item6:hover .group-hover\/item6\:block {
+  display: block;
+}
+
+.group\/item7:hover .group-hover\/item7\:block {
+  display: block;
+}
+
+.group\/item2:hover .group-hover\/item2\:block {
+  display: block;
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -1873,12 +1872,12 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:justify-start {
@@ -1888,6 +1887,11 @@ video {
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .lg\:px-20 {
@@ -1942,10 +1946,6 @@ video {
 
   .xl\:pt-\[72px\] {
     padding-top: 72px;
-  }
-
-  .xl\:pr-20 {
-    padding-right: 5rem;
   }
 }
 
