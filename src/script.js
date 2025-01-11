@@ -2,10 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
 
   window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 1800) {
           navbar.classList.add("scrolled");
-      } else {
+        } else {
           navbar.classList.remove("scrolled");
+      }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbars");
+
+  window.addEventListener("scroll", () => {
+      if (window.scrollY > 1800) {
+          navbar.classList.add("scrolleds");
+        } else {
+          navbar.classList.remove("scrolleds");
       }
   });
 });

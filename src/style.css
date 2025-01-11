@@ -1,13 +1,17 @@
 /* Initial navbar background color */
-#navbar {
-    background-color: #fff8ee;
-    /* box-shadow: none; */
-}
+
 
 /* Navbar background color when scrolled */
-#navbar.scrolled {
+#navbar.scrolled{
     background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+}
+
+
+#navbars.scrolleds{
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
 }
 
  [id^='content-'] {
